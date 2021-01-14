@@ -6,6 +6,7 @@ import router from './router'
 import 'element-ui/lib/theme-chalk/index.css';
 import axios from 'axios'
 
+
 Vue.prototype.$axios = axios
 axios.defaults.withCredentials = true
 Vue.config.productionTip = false

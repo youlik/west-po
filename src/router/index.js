@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from "vue-router";
+import Index from '../components/index'
 import Home from '../components/home'
+import moodEssay from "../components/moodEssay";
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -14,6 +16,7 @@ export default new VueRouter({
     {
       path:'/moodEssay',
       name:'moodEssay',
+      component: moodEssay,
       meta:{title:'心情随笔'}
     },
     {

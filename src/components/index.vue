@@ -3,28 +3,9 @@
         <tabs @login="flag=true"></tabs>
         <div class="body-container">
             <section class="timeline-container">
-                <path-map></path-map>
-            </section>
-            <!--            <section class="content-container">-->
-            <!--                <card :card-data="item" v-for="(item,index) in list" :key="index">-->
+                <router-view></router-view>
 
-            <!--                </card>-->
-            <!--            </section>-->
-            <!--            <ming-dialog :flag="flag" title="登录">-->
-            <!--                <section class="dialog-layout-default">-->
-            <!--                    <span style="text-align: left" class="label">用户名</span>-->
-            <!--                    <el-input v-model="username">-->
-            <!--                        <i slot="prefix" class="el-input__icon el-icon-user"></i>-->
-            <!--                    </el-input>-->
-            <!--                    <span style="text-align: left;margin-top: 10px" class="label">密码</span>-->
-            <!--                    <el-input v-model="password">-->
-            <!--                        <i slot="prefix" class="el-input__icon el-icon-goods"></i>-->
-            <!--                    </el-input>-->
-            <!--                    <div class="btn">-->
-            <!--                        <el-button type="primary" width="120px" @click="login">登录</el-button>-->
-            <!--                    </div>-->
-            <!--                </section>-->
-            <!--            </ming-dialog>-->
+            </section>
         </div>
 
     </div>
