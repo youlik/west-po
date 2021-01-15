@@ -25,7 +25,7 @@
         let mapChart = eCharts.init(document.getElementById("map-wrap"))
         let option = {
           title: {
-            text: '浙江',
+            text: 'homeland',
             left: 'center'
           },
           geo:{

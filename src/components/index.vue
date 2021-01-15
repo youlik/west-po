@@ -66,7 +66,6 @@
         height: 1080px;
         overflow: hidden auto;
         background-color: #f4f5f5;
-
         /*background-image: url("../assets/11.jpg");*/
         background-size: 1920px 1080px;
     }
@@ -81,7 +80,11 @@
         height: 900px;
         margin: 0 auto;
     }
-
+    .message-container{
+        width: 200px;
+        height: 100px;
+        background-color: #ffffff;
+    }
     .timeline-container {
         margin-top: 70px;
     }

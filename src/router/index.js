@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Index from '../components/index'
 import Home from '../components/home'
 import moodEssay from "../components/moodEssay";
+import messageBoard from "../components/messageBoard";
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -21,12 +22,13 @@ export default new VueRouter({
     },
     {
       path:'/technology',
-      name:'technology ',
+      name:'technology',
       meta:{title:'技术分享'}
     },
     {
       path:'/message',
       name:'message',
+      component: messageBoard,
       meta:{title:'留言板'}
     },
   ]
