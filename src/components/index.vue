@@ -1,5 +1,9 @@
 <template>
     <div class="home-container">
+        <section class="flash">
+            <div class="flash-bar"></div>
+            <img src="../assets/home.jpg" height="100px" width="1920px">
+        </section>
         <tabs @login="flag=true"></tabs>
         <div class="body-container">
             <section class="timeline-container">
@@ -79,6 +83,20 @@
         width: 100%;
         height: 900px;
         margin: 0 auto;
+    }
+    .flash-bar {
+        position: absolute;
+        left:-100px;
+        width: 20px;
+        height: 100px;
+        background: #fff;
+        opacity: 0.5;
+        transform: skewX(-30deg);
+        transform-origin: 0 100%;
+    }
+    .flash:hover .flash-bar {
+        left:1920px;
+        transition: left ease-in-out 1s;
     }
     .message-container{
         width: 200px;

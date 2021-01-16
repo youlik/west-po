@@ -31,7 +31,15 @@
             imageList:[{url:require('../assets/image1.jpg')},{url:require('../assets/image2.jpg')},{url:require('../assets/image3.jpg')}]
           }
         },
-        components:{pathMap,scrollImage}
+      methods:{
+
+      },
+      created() {
+        this.$axios({
+          url:'http://localhost:3000/',
+        })
+      },
+      components:{pathMap,scrollImage}
     }
 </script>
 
