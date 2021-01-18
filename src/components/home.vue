@@ -11,13 +11,9 @@
             <section class="body-container">
 
             </section>
-            <path-map></path-map>
+<!--            <path-map></path-map>-->
         </div>
-        <div class="tip-container shadow">
-                <div class="block-title">Youlik 一个爱笑的男孩子</div><br>
-                <a href="https://juejin.cn/user/1151943917439230" style="padding-left: 15px">掘金传送门</a><br>
-                <a href="https://blog.csdn.net/Yuoliku?spm=1019.2139.3001.5343" style="padding-left: 15px">CSDN传送门</a>
-        </div>
+
     </div>
 </template>
 
@@ -36,7 +32,9 @@
       },
       created() {
         this.$axios({
-          url:'http://localhost:3000/',
+          url:'/',
+        }).then(res=>{
+          console.log(res)
         })
       },
       components:{pathMap,scrollImage}
@@ -46,7 +44,7 @@
 <style scoped>
     .home-containers{
         width: 960px;
-        display: flex;
+        height: 2000px;
     }
 
     .image-container{
@@ -58,7 +56,7 @@
         height: 200px;
         margin-left:10px;
         text-align: left;
-        flex: 0 0 240px;
+        /*flex: 0 0 240px;*/
         font-size: 10px;
         background-color: #ffffff;
 

@@ -1,10 +1,11 @@
 <template>
-    <div>
-        <el-button @click="jieliu"></el-button>
+    <div class="mood-essay-container">
+        <time-line-image></time-line-image>
     </div>
 </template>
 
 <script>
+    import timeLineImage from "../views/timeLineImage";
   export default {
     name: "moodEssay",
     data(){
@@ -13,27 +14,17 @@
         flag:true
       }
     },
+    components:{timeLineImage},
     methods:{
-      fandou(flag){
-        clearInterval(this.timer)
-        if(flag){
-          this.flag = false
-          setTimeout(()=>flag=true,2000)
-          this.timer = setInterval(()=>{
-            console.log('time')
-          },2000)
-        }
-      },
-      jieliu(){
-        this.timer && clearInterval(this.timer)
-        this.timer = setInterval(()=>{
-          console.log("节流")
-        },2000)
-      }
+
     }
   }
 </script>
 
 <style scoped>
-
+    .mood-essay-container{
+        width: 960px;
+        height: 500px;
+        background-color: #ffffff;
+    }
 </style>

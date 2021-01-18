@@ -2,7 +2,7 @@
     <div class="home-container">
         <section class="flash">
             <div class="flash-bar"></div>
-            <img src="../assets/home.jpg" height="100px" width="1920px">
+<!--            <img src="../assets/home.jpg" height="100px" width="1920px">-->
         </section>
         <tabs @login="flag=true"></tabs>
         <div class="body-container">
