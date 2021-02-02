@@ -1,18 +1,12 @@
 <template>
     <div class="home-containers shadow">
-        <div>
-            <section class="image-container">
-                <el-carousel :interval="4000" type="card" height="300px">
-                    <el-carousel-item v-for="item in imageList">
-                        <img :src="item.url">
-                    </el-carousel-item>
-                </el-carousel>
-            </section>
-            <section class="body-container">
-
-            </section>
-<!--            <path-map></path-map>-->
-        </div>
+        <section style="display: flex;justify-content: space-between;align-items: center">
+            <div class="left-container"></div>
+            <h1 style="z-index: 1; transform: translate3d(0px, 0px, 1px);">
+                你好<br>欢迎来到Youlik的个人博客
+            </h1>
+            <div class="right-container"></div>
+        </section>
 
     </div>
 </template>
@@ -51,6 +45,22 @@
         background-color: #ffffff;
     }
 
+    .left-container{
+        width: 200px;
+        height: 400px;
+        background: url("../assets/left-card.jpg");
+        background-size: 200px 400px;
+        margin-top: -20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .right-container{
+        width: 200px;
+        height: 400px;
+        background: url("../assets/right-card.jpg");
+        background-size: 200px 400px;
+        margin-top: 70px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
     .tip-container{
         width: 240px;
         height: 200px;

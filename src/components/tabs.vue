@@ -3,14 +3,19 @@
         <div class="title-box" :class="selectId===item.id?'selected_tabs':'define_tabs'" v-for="item in routeList"
              :key="item.id"
              @click="selectTabs(item.id)">
-            <router-link :to="item.path"><i :class="item.meta.icon"></i><span>{{item.meta.title}}</span></router-link>
+            <router-link :to="item.path"><i :class="item.meta.icon"></i><span style="height: 100%">{{item.meta.title}}</span></router-link>
         </div>
-        <div @click="$emit('login')">登录</div>
+        <div @click="flag=true">登录</div>
+        <ming-dialog :flag="true ">
+            <login></login>
+        </ming-dialog>
     </div>
 </template>
 
 <script>
   import router from '../router/index'
+  import Login from '../views/login'
+  import MingDialog from "./mingDialog";
 
   export default {
     name: "tabs",
@@ -21,7 +26,7 @@
         routeList: []
       }
     },
-    components: {},
+    components: {MingDialog, Login},
     methods: {
       selectTabs(id) {
         this.selectId = id
