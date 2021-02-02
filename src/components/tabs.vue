@@ -3,7 +3,7 @@
         <div class="title-box" :class="selectId===item.id?'selected_tabs':'define_tabs'" v-for="item in routeList"
              :key="item.id"
              @click="selectTabs(item.id)">
-            <router-link :to="item.path"><span>{{item.meta.title}}</span></router-link>
+            <router-link :to="item.path"><i :class="item.meta.icon"></i><span>{{item.meta.title}}</span></router-link>
         </div>
         <div @click="$emit('login')">登录</div>
     </div>

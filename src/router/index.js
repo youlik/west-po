@@ -12,24 +12,24 @@ export default new VueRouter({
       path:'/home',
       name:'home',
       component:Home,
-      meta:{title:'首页'}
+      meta:{title:'首页',icon:'el-icon-house'}
     },
     {
       path:'/moodEssay',
       name:'moodEssay',
       component: moodEssay,
-      meta:{title:'心情随笔'}
+      meta:{title:'心情随笔',icon:'el-icon-scissors'}
     },
     {
       path:'/technology',
       name:'technology',
-      meta:{title:'技术分享'}
+      meta:{title:'技术分享',icon:'el-icon-collection'}
     },
     {
       path:'/message',
       name:'message',
       component: messageBoard,
-      meta:{title:'留言板'}
+      meta:{title:'留言板',icon:'el-icon-notebook-1'}
     },
   ]
 })
