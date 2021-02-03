@@ -1,6 +1,8 @@
 <template>
     <div class="base-button-container">
-        <button style="width: 100%;height: 100%">{{label}}</button>
+        <button style="width: 100%;height: 100%;cursor: pointer" :class="[type,'base']">
+            <span>{{label}}</span>
+        </button>
     </div>
 </template>
 
@@ -12,7 +14,7 @@
           type:String,
           default:'确认'
         },
-        btnType:{
+        type:{
           type:String,
           default:'primary'
         }
@@ -26,11 +28,33 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
     .base-button-container{
         height: 40px;
         width: 98px;
         color: #ffffff;
         font-size: 16px;
+        border-radius: 4px;
+    }
+
+    .base{
+        border-radius: 4px;
+        outline: none;
+        cursor: pointer;
+        text-align: center;
+        color: white;
+        border: 1px solid #dcdfe6;
+
+    }
+
+    .primary{
+        background-color: #007fff;
+        &:hover{
+            background-color: #66b1ff;
+            border-color: #66b1ff;
+        }
+        &:active{
+            background-color: #B2DFEE;
+        }
     }
 </style>
