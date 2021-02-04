@@ -1,6 +1,6 @@
 <template>
     <div class="base-button-container">
-        <button style="width: 100%;height: 100%;cursor: pointer" :class="[type,'base']">
+        <button style="width: 100%;height: 100%;cursor: pointer" @click="$emit('click')":class="[type,'base']">
             <span>{{label}}</span>
         </button>
     </div>
@@ -43,6 +43,7 @@
         cursor: pointer;
         text-align: center;
         color: white;
+        z-index: 99999;
         border: 1px solid #dcdfe6;
 
     }

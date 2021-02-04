@@ -6,9 +6,9 @@
             <router-link :to="item.path"><i :class="item.meta.icon"></i><span style="height: 100%">{{item.meta.title}}</span></router-link>
         </div>
         <div @click="flag=true">登录</div>
-        <ming-dialog :flag="true ">
+        <base-dialog :flag="true" title="登录">
             <login></login>
-        </ming-dialog>
+        </base-dialog>
     </div>
 </template>
 
@@ -16,7 +16,7 @@
   import router from '../router/index'
   import Login from '../views/login'
   import MingDialog from "./mingDialog";
-
+  import baseDialog from "../basicComponent/baseDialog";
   export default {
     name: "tabs",
     data() {
@@ -26,7 +26,7 @@
         routeList: []
       }
     },
-    components: {MingDialog, Login},
+    components: {MingDialog, Login,baseDialog},
     methods: {
       selectTabs(id) {
         this.selectId = id

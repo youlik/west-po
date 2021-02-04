@@ -1,16 +1,20 @@
 <template>
     <div class="login-container">
-        <input v-model="username">
-        <input v-model="password">
-        <base-button></base-button>
+        <section>
+            <base-input v-model="username" label="用户名"></base-input>
+            <base-input v-model="password" type="password" label="密码"></base-input>
+            <base-button @click="submit"></base-button>
+        </section>
+
     </div>
 </template>
 
 <script>
     import BaseButton from "../basicComponent/baseButton";
+    import BaseInput from "../basicComponent/baseInput";
     export default {
         name: "login.vue",
-      components: {BaseButton},
+      components: {BaseInput, BaseButton},
       data(){
             return{
                 username:"",
@@ -25,7 +29,10 @@
                 }).then(function (result) {
                     console.log(result)
                 })
-            }
+            },
+          submit(){
+            console.log(this.username)
+          }
         }
     }
 </script>

@@ -12,17 +12,20 @@
         </div>
         <div class="submit-container">
             <el-input :row="2" v-model="messageContent"></el-input>
-            <el-button type="primary" @click="addMess">提交</el-button>
+            <base-button @click="addMess" label="提交"></base-button>
         </div>
     </div>
 </template>
 
 <script>
     import dayjs from 'dayjs'
+    import BaseInput from "../basicComponent/baseInput";
+    import BaseButton from "../basicComponent/baseButton";
 
     export default {
         name: "messageBoard",
-        data() {
+      components: {BaseButton, BaseInput},
+      data() {
             return {
                 list: [],
                 messageContent: ''
