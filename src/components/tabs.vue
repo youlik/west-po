@@ -5,10 +5,7 @@
              @click="selectTabs(item.id)">
             <router-link :to="item.path"><i :class="item.meta.icon"></i><span style="height: 100%">{{item.meta.title}}</span></router-link>
         </div>
-        <div @click="flag=true">登录</div>
-        <base-dialog :flag="true" title="登录">
-            <login></login>
-        </base-dialog>
+
     </div>
 </template>
 

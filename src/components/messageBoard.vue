@@ -39,8 +39,9 @@
                 })
             },
             addMess() {
-                this.$axios.post('/users/addMessage', {author: '张三', content: '5555555'}).then(res => {
+                this.$axios.post('/users/addMessage', {author: '张三', content: this.messageContent}).then(res => {
                     this.$message.success('留言成功')
+                    this.messageContent = ''    
                     this.fetchData()
                 })
             }

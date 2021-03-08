@@ -5,6 +5,7 @@ import Router from 'vue-router'
 import router from './router'
 import 'element-ui/lib/theme-chalk/index.css';
 import '../src/common/css/base.scss'
+import "../src/common/css/baseColor.scss"
 import axios from 'axios'
 
 

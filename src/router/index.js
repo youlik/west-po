@@ -4,6 +4,7 @@ import Index from '../components/index'
 import Home from '../components/home'
 import moodEssay from "../components/moodEssay";
 import messageBoard from "../components/messageBoard";
+import demo from "../components/demo"
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -23,7 +24,8 @@ export default new VueRouter({
     {
       path:'/technology',
       name:'technology',
-      meta:{title:'技术分享',icon:'el-icon-collection'}
+      component: demo,
+      meta:{title:'组件Demo',icon:'el-icon-collection'}
     },
     {
       path:'/message',
