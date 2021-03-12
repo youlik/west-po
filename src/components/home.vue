@@ -2,7 +2,7 @@
     <div class="home-containers shadow">
         <section style="display: flex;justify-content: space-between;align-items: center">
             <div class="left-container"></div>
-            <h1 style="z-index: 1; transform: translate3d(0px, 0px, 1px);">
+            <h1 style="z-index: 1; transform: translate3d(0px, 0px, 1px);font-size: 0.5rem">
                 你好<br>欢迎来到Youlik的个人博客
             </h1>
             <div class="right-container"></div>
@@ -37,8 +37,9 @@
 
 <style scoped>
     .home-containers{
-        width: 960px;
         height: 2000px;
+        margin: 0 auto;
+        padding: 5px;
     }
 
     .image-container{
@@ -46,7 +47,7 @@
     }
 
     .left-container{
-        width: 200px;
+        width: 160px;
         height: 400px;
         background: url("../assets/left-card.jpg");
         background-size: 200px 400px;
@@ -54,7 +55,7 @@
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
     .right-container{
-        width: 200px;
+        width: 160px;
         height: 400px;
         background: url("../assets/right-card.jpg");
         background-size: 200px 400px;

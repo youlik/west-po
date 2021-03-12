@@ -1,11 +1,12 @@
 <template>
     <div class="mood-essay-container">
-        <time-line-image></time-line-image>
+        <path-map></path-map>
     </div>
 </template>
 
 <script>
     import timeLineImage from "../views/timeLineImage";
+    import pathMap from "../views/pathMap"
   export default {
     name: "moodEssay",
     data(){
@@ -14,7 +15,7 @@
         flag:true
       }
     },
-    components:{timeLineImage},
+    components:{timeLineImage,pathMap},
     methods:{
 
     }
@@ -23,8 +24,9 @@
 
 <style scoped>
     .mood-essay-container{
-        width: 960px;
-        height: 500px;
         background-color: #ffffff;
+        background: url("../../src/assets/back.jpg");
+        height: 1080px;
+        background-size: 1920px 1080px;
     }
 </style>

@@ -14,4 +14,15 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
+<script>
+  let docEle = document.documentElement
+  function setHtmlFontSize() {
+     let width = docEle.clientWidth
+    document.documentElement.style.fontSize =width/10 + 'px';
+  }
+
+  console.log(docEle.style.fontSize)
+  setHtmlFontSize()
+  window.addEventListener('resize', setHtmlFontSize)
+</script>
 </html>

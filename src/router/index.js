@@ -19,7 +19,7 @@ export default new VueRouter({
       path:'/moodEssay',
       name:'moodEssay',
       component: moodEssay,
-      meta:{title:'心情随笔',icon:'el-icon-scissors'}
+      meta:{title:'可视化',icon:'el-icon-scissors'}
     },
     {
       path:'/technology',
