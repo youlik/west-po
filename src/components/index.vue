@@ -66,12 +66,11 @@
 
 <style scoped>
     .home-container {
-        width: 1920px;
-        height: 1080px;
+        width: 10rem;
         overflow: hidden auto;
         background-color: #f4f5f5;
         /*background-image: url("../assets/11.jpg");*/
-        background-size: 1920px 1080px;
+        background-size: 10rem 1080px;
     }
 
     .header-container {
@@ -79,7 +78,6 @@
     }
 
     .body-container {
-        max-width: 960px;
         width: 100%;
         height: 900px;
         margin: 0 auto;

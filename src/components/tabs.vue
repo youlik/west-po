@@ -3,12 +3,8 @@
         <div class="title-box" :class="selectId===item.id?'selected_tabs':'define_tabs'" v-for="item in routeList"
              :key="item.id"
              @click="selectTabs(item.id)">
-            <router-link :to="item.path"><i :class="item.meta.icon"></i><span style="height: 100%">{{item.meta.title}}</span></router-link>
+            <router-link :to="item.path"><i :class="item.meta.icon" style="font-size: 16px"></i><span style="height: 100%;font-size: 16px">{{item.meta.title}}</span></router-link>
         </div>
-        <div @click="flag=true">登录</div>
-        <base-dialog :flag="true" title="登录">
-            <login></login>
-        </base-dialog>
     </div>
 </template>
 
@@ -47,7 +43,7 @@
         align-items: center;
         justify-content: center;
         position: fixed;
-        width: 100%;
+        width: 10rem;
         opacity: 0.8;
         background: url("../../src/assets/home.jpg");
         top: 0;
@@ -73,6 +69,7 @@
 
     a {
         text-decoration: none;
+        font-size: 16px;
         color: white;
     }
 
