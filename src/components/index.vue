@@ -79,7 +79,7 @@
 
     .body-container {
         width: 100%;
-        height: 900px;
+        height: 1019px;
         margin: 0 auto;
     }
     .flash-bar {
@@ -102,7 +102,7 @@
         background-color: #ffffff;
     }
     .timeline-container {
-        margin-top: 70px;
+        margin-top: 61px;
     }
 
     .content-container {

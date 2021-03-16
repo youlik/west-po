@@ -1,0 +1,36 @@
+//表格主题颜色修改
+.el-table__body-wrapper{
+  background-color:#245073 !important;
+}
+
+.tl-table{
+  border-radius: 4px ;
+}
+//行颜色修改
+.el-table td{
+  background-color: #245073;
+  color: #ffffff;
+}
+
+//列样色修改
+.el-table th {
+  background-color: #002e52;
+  color: #ffffff;
+}
+
+//表头行颜色
+.el-table__header{
+  background-color: #002e52 !important;
+}
+
+.el-table--enable-row-hover .el-table__body tr:hover>td {/*表格选中颜色*/
+  background-color: #70a6d0;
+}
+
+.el-table td, .el-table th.is-leaf,.el-table--border, .el-table--group{
+  border-color: rgb(51, 65, 107);
+}
+
+.el-table--border::after, .el-table--group::after, .el-table::before{
+  background-color: rgb(51, 65, 107);
+}

@@ -7,7 +7,9 @@
             </h1>
             <div class="right-container"></div>
         </section>
-
+        <section>
+            备案号
+        </section>
     </div>
 </template>
 

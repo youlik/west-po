@@ -36,6 +36,16 @@
     }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+    .base-table-container{
+    }
+    /*/deep/.el-table__body-wrapper{*/
+    /*    background-color: #11476b !important;*/
+    /*}*/
+    /*/deep/.el-table__header-wrapper{*/
+    /*    background-color: #11476b !important;*/
+    /*}*/
+    /*/ddep/ .el-table-td{*/
+    /*    color: white !important;*/
+    /*}*/
 </style>
