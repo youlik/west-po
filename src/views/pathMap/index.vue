@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div id="map-wrap" style="height: 700px;width:1000px">
+            <div id="map-wrap" style="height: 850px;width:1000px">
         </div>
     </div>
 </template>
@@ -24,22 +24,18 @@
                 eCharts.registerMap('浙江', ZheJiang)
                 let mapChart = eCharts.init(document.getElementById("map-wrap"))
                 let option = {
-                    geo: {
-                        map: '浙江',
-                        regions: [{
-                            name: '温州',
-                            selected: true,
-                        }],
-                        zoom:1.2,
-                        roam:false,
-                        backgroundColor: ''
-                    },
                     series: [{
                         name: '浙江',
                         type: 'map',
                         map: '浙江',
+                        zoom:1.5,
+                        top:'250',
                         label: {
                             show: true,
+                            color: '#0ee3f8'
+                        },
+                        emphasis:{
+                            show:true,
                             color: '#0ee3f8'
                         },
                         itemStyle: {

@@ -1,18 +1,12 @@
 <template>
     <div class="message-board-container">
-        <div class="message-container" v-for="item in list">
-            <div style="display: flex;justify-content: flex-start;">
-                <img src="../assets/blueSky.jpg" width="20px" height="20px" style="border-radius: 25px">
-                <span>{{item.author}}</span>
-            </div>
-            <div>
-                {{item.content}}
-            </div>
-            <div style="text-align: right">{{item.time}}</div>
+        <div class="card-list-container">
+            <message-card :data="item" :key="index" v-for="(item,index) in list"></message-card>
         </div>
-        <div class="submit-container">
-            <el-input :row="2" v-model="messageContent"></el-input>
-            <base-button @click="addMess" label="提交"></base-button>
+        <div style="width: 400px;height: 400px;float: right">
+            <base-input label="名称" v-model="message.author"></base-input>
+            <base-input label="内容" v-model="message.content"></base-input>
+            <base-button label="提交" @click="addMess"></base-button>
         </div>
     </div>
 </template>
@@ -21,14 +15,19 @@
     import dayjs from 'dayjs'
     import BaseInput from "../basicComponent/baseInput";
     import BaseButton from "../basicComponent/baseButton";
+    import MessageCard from "./messageCard";
 
     export default {
         name: "messageBoard",
-      components: {BaseButton, BaseInput},
-      data() {
+        components: {MessageCard, BaseButton, BaseInput},
+        data() {
             return {
                 list: [],
-                messageContent: ''
+                messageContent: '',
+                message: {
+                    author: "",
+                    content: ""
+                }
             }
         },
         methods: {
@@ -39,9 +38,13 @@
                 })
             },
             addMess() {
-                this.$axios.post('/users/addMessage', {author: '张三', content: this.messageContent}).then(res => {
+                if (!this.message.content || !this.message.author) {
+                    this.$message.warning('请填写完整')
+                    return;
+                }
+                this.$axios.post('/users/addMessage', this.message).then(res => {
                     this.$message.success('留言成功')
-                    this.messageContent = ''    
+                    this.messageContent = ''
                     this.fetchData()
                 })
             }
@@ -54,9 +57,11 @@
 
 <style scoped>
     .message-board-container {
-        height: 700px;
+        width: 9rem;
+        margin: 0 auto;
+        overflow-y: auto;
         background-color: #ffffff;
-        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
     }
 
     .message-container {
@@ -65,6 +70,11 @@
         min-height: 50px;
         border-radius: 16px;
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);;
+    }
+
+    .card-list-container {
+        float: left;
+        width: 6.7rem;
     }
 
     .submit-container {
