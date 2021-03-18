@@ -1,18 +1,18 @@
 <template>
-    <section>
+    <div class="demo-container">
         <el-divider content-position="left">基础组件</el-divider>
         <base-button></base-button>
         <base-input></base-input>
         <base-select :select-list="selectList"></base-select>
         <base-range></base-range>
-        <base-table :list="list">
+        <base-table :list="list" >
             <base-column label="名称" prop="name"></base-column>
             <base-column label="年龄" prop="age"></base-column>
             <base-column label="地址" prop="address"></base-column>
         </base-table>
         <el-divider content-position="left">可视化</el-divider>
-        <path-map></path-map>
-    </section>
+<!--        <path-map></path-map>-->
+    </div>
 </template>
 
 <script>
@@ -39,6 +39,12 @@
 <style scoped>
     .el-divider__text {
         background-color: transparent;
+    }
+
+    .demo-container{
+        width: 600px;
+        border: 1px solid yellowgreen;
+        margin: 0 auto;
     }
 
 </style>

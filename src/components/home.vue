@@ -1,15 +1,14 @@
 <template>
-    <div class="home-containers shadow">
-        <section style="display: flex;justify-content: space-between;align-items: center">
-            <div class="left-container"></div>
-            <h1 style="z-index: 1; transform: translate3d(0px, 0px, 1px);font-size: 0.5rem">
-                你好<br>欢迎来到Youlik的个人博客
-            </h1>
-            <div class="right-container"></div>
-        </section>
-        <section>
-            备案号
-        </section>
+    <div class="home-containers">
+        <div style="margin-top: 1.25rem">
+            <span style="font-size: 40px;color: white;">
+                           欢迎来到Youlik的个人网站
+            </span>
+            <div>
+                <a href="https://juejin.cn/user/1151943917439230" class="link">掘金</a>
+                <a href="https://juejin.cn/user/1151943917439230" class="link">CSDN</a>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -39,9 +38,14 @@
 
 <style scoped>
     .home-containers{
-        height: 2000px;
         margin: 0 auto;
+        /*display: flex;*/
+        height: 4.5rem;
+        /*align-items: center;*/
+        /*justify-content: center;*/
         padding: 5px;
+        background-repeat: no-repeat;
+        background: url("../../src/assets/Hippopx.jpg");
     }
 
     .image-container{
@@ -73,6 +77,13 @@
         font-size: 10px;
         background-color: #ffffff;
 
+    }
+    .link{
+        display: inline-block;
+        padding: 20px;
+        color: #ffffff;
+        min-width: 80px;
+        font-size: 20px;
     }
     .shadow{
         box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);

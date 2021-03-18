@@ -1,8 +1,8 @@
 <template>
     <section>
-        <div class="base-input-container" :style="{width:width}">
+        <div class="base-input-container" :style="{width:width}" :class="[{'haveFocus':haveFocus}]">
             <span class="label-container">{{label}}</span>
-            <input v-model="boundValue" :type="type" class="input"></input>
+            <input v-model="boundValue" @focus="haveFocus = true" @blur="haveFocus = false" :type="type" class="input">
             <i class="el-icon-circle-close" style="margin-left: -16px;cursor:pointer;" @click="boundValue=''"
                v-show="boundValue"></i>
         </div>
@@ -18,6 +18,7 @@
             return {
                 boundValue: '',
                 error: false,
+                haveFocus:false
             }
         },
         props: {
@@ -54,11 +55,6 @@
         font-size: 16px;
         margin: 10px 0;
         box-sizing: border-box;
-
-        &:focus {
-            border: 1px solid red;
-        }
-
     }
 
     .tip-container {
@@ -79,6 +75,9 @@
         font-size: 16px;
         padding: 0 10px;
         text-align: left;
+    }
 
+    .haveFocus{
+        border: 1px solid red;
     }
 </style>

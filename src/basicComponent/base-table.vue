@@ -1,6 +1,6 @@
 <template>
     <div class="base-table-container">
-        <el-table :data="list" :height="height" :border="border" :stripe="stripe">
+        <el-table :data="list" :height="height" :border="border" :width="width" :stripe="stripe">
             <slot></slot>
         </el-table>
     </div>
@@ -30,6 +30,10 @@
             stripe:{
                 type:Boolean,
                 default:false
+            },
+            width:{
+                type:String,
+                default:"400px"
             }
 
         }
