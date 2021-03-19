@@ -1,8 +1,8 @@
 <template>
     <section>
-        <div class="base-input-container" :style="{width:width}" :class="[{'haveFocus':haveFocus}]">
+        <div class="base-input-container" :style="{width:width,margin:margin}" :class="[{'haveFocus':haveFocus,'disabled':disabled}]">
             <span class="label-container">{{label}}</span>
-            <input v-model="boundValue" @focus="haveFocus = true" @blur="haveFocus = false" :type="type" class="input">
+            <input v-model="boundValue" @focus="haveFocus = true" @blur="haveFocus = false" :disabled = "disabled" :type="type" class="input">
             <i class="el-icon-circle-close" style="margin-left: -16px;cursor:pointer;" @click="boundValue=''"
                v-show="boundValue"></i>
         </div>
@@ -34,9 +34,17 @@
                 type: String,
                 default: 'text'
             },
+            margin:{
+              type:String,
+              default:''
+            },
             rules: {
                 type: String,
                 default: ""
+            },
+            disabled: {
+                type:Boolean,
+                default:false
             }
         },
         watch: {
@@ -75,9 +83,16 @@
         font-size: 16px;
         padding: 0 10px;
         text-align: left;
+        &:disabled{
+            cursor: not-allowed;
+        }
     }
 
+    .disabled{
+        background-color: 	#DCDCDC;
+        cursor: not-allowed;
+    }
     .haveFocus{
-        border: 1px solid red;
+        border: 1px solid #00BFFF;
     }
 </style>
