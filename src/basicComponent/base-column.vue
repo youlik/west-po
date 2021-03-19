@@ -1,6 +1,6 @@
 <template>
     <div>
-        <el-table-column :label="label" :prop="prop">
+        <el-table-column :label="label" :prop="prop" :column-key="label">
             <slot></slot>
         </el-table-column>
     </div>

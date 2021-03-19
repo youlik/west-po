@@ -11,7 +11,6 @@
 <script>
   import router from '../router/index'
   import Login from '../views/login'
-  import MingDialog from "./mingDialog";
   import baseDialog from "../basicComponent/baseDialog";
   export default {
     name: "tabs",
@@ -22,7 +21,7 @@
         routeList: []
       }
     },
-    components: {MingDialog, Login,baseDialog},
+    components: {Login,baseDialog},
     methods: {
       selectTabs(id) {
         this.selectId = id
