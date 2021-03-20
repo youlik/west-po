@@ -1,6 +1,6 @@
 <template>
-    <div class="base-button-container">
-        <button style="width: 100%;height: 100%;cursor: pointer" @click="$emit('click')":class="[type,'base']">
+    <div class="base-button-container" :class="[{'disabled':disabled}]" :style="{'margin':margin}">
+        <button style="width: 100%;height: 100%" @click="$emit('click')" :class="[type,'base']" :disabled="disabled">
             <span>{{label}}</span>
         </button>
     </div>
@@ -17,6 +17,14 @@
         type:{
           type:String,
           default:'primary'
+        },
+        disabled:{
+            type:Boolean,
+            default:false
+        },
+        margin:{
+            type:String,
+            default:""
         }
     },
     data(){
@@ -48,6 +56,11 @@
 
     }
 
+    .disabled{
+        background-color:#DCDCDC;
+        cursor: not-allowed;
+    }
+
     .primary{
         background-color: #007fff;
         &:hover{
@@ -56,6 +69,12 @@
         }
         &:active{
             background-color: #B2DFEE;
+        }
+
+        &:disabled{
+            background-color:#DCDCDC;
+            border: 1px solid black;
+            cursor: not-allowed;
         }
     }
 </style>

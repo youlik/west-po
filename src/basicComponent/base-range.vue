@@ -1,8 +1,8 @@
 <template>
-    <div class="base-range-container">
+    <section class="base-range-container">
         <span class="label-container">{{label}}</span>
         <input type="range" :max="maxSize" :step="step" value="0" ></input>
-    </div>
+    </section>
 </template>
 
 <script>

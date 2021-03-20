@@ -1,11 +1,11 @@
 <template>
-    <section class="base-select-container" :style="{width:width}" :class="[{'isFocus':isFocus,'disabled':disabled}]">
+    <section class="base-select-container" :style="{width:width}">
         <span class="label-container">{{label}}</span>
         <div class="select-container-main">
-            <input v-model="currentValue" :disabled="disabled" @focus="isFocus = true" @blur="isFocus = false" class="input">
+            <input v-model="currentValue" class="input">
             <div>
                 <ul class="base-select-ul" :class="{showOptions:!showOptions}">
-                    <li v-for="(item,index) in selectList" class="select-dropdown-item" @click="selectChange(item)"
+                    <li v-for="item in selectList" class="select-dropdown-item" @click="selectChange(item)"
                         :key="item.value" :class="{selectOption:item.label===currentValue}">{{item.label}}
                     </li>
                 </ul>
@@ -19,12 +19,11 @@
 <script>
     export default {
 
-            name: "base-select",
-        data() { 
+        name: "base-select",
+        data() {
             return {
                 showOptions: false,
-                currentValue: '',
-                isFocus:false
+                currentValue: ''
             }
         },
         methods: {
@@ -42,13 +41,9 @@
                 type: String,
                 default: '默认'
             },
-            width:{
-                type:String,
-                default:"360px"
-            },
-            disabled:{
-                type:Boolean,
-                default:false
+            width: {
+                type: String,
+                default: "360px"
             }
         }
     }
@@ -66,7 +61,6 @@
     }
 
 
-
     .base-select-ul {
         list-style: none;
         width: 100%;
@@ -77,7 +71,7 @@
         background-color: #ffffff;
         border-radius: 0 0 4px 4px;
         top: 41px;
-        z-index: 99999;
+        z-index: 99999999;
     }
 
     .select-container-main {
@@ -123,14 +117,5 @@
         padding: 0 10px;
         text-align: left;
 
-    }
-
-    .disabled{
-        cursor: none;
-        background: #2c3e50;
-    }
-
-    .isFocus{
-        border: 1px solid red;
     }
 </style>

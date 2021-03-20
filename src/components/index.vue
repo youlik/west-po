@@ -103,6 +103,7 @@
     }
     .timeline-container {
         margin-top: 61px;
+        height: 100%;
     }
 
     .content-container {
