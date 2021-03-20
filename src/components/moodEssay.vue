@@ -33,7 +33,13 @@
                 </div>
             </div>
             <div class="main-container">
-                <path-map></path-map>
+                <div class="detail-container">
+                    <div style="font-size: 18px;color: white;padding: 10px;text-align: left">地区：{{addressData.name}}</div>
+                    <div style="font-size: 18px;color: white;padding: 10px;text-align: left">
+                        本地区年度销售额{{addressData.value}}(万元)
+                    </div>
+                </div>
+                <path-map @addressData = "(data)=>addressData = data"></path-map>
             </div>
             <div class="right-container">
                 <div style="border: 1px solid #55bcd4;height: 400px;margin-bottom: 30px">
@@ -64,7 +70,8 @@
                 timer: null,
                 flag: true,
                 titleData : [{title:"总销售额",price:1000},{title:"总订单量",price:80000},{title:"单日最高营业额",price:999},{title:"门店营业额",price:500000}],
-                foodData:[{name:"周黑鸭",price:45,address:'中国'},{name:"苹果",price:45,address:'浙江'},{name:"周黑鸭",price:45,address:'中国'},{name:"香蕉",price:45,address:'印度'}]
+                foodData:[{name:"周黑鸭",price:45,address:'中国'},{name:"苹果",price:45,address:'浙江'},{name:"周黑鸭",price:45,address:'中国'},{name:"香蕉",price:45,address:'印度'}],
+                addressData:[]
             }
         },
         components: {PanChart, Weather, LineChart, BaseTable, BaseColumn, timeLineImage, pathMap},
@@ -117,8 +124,9 @@
     .main-container {
         width: 1000px;
         height: 919px;
-        display: flex;
-        align-items: center;
+        position: relative;
+        /*display: flex;*/
+        /*align-items: center;*/
     }
 
     .table-container {
@@ -153,6 +161,15 @@
         color: #F37B1D !important;
     }
 
+    .detail-container{
+        width: 400px;
+        height: 300px;
+        border: 1px solid yellow;
+        float: left;
+        position: absolute;
+        bottom: 80px;
+        left: 20px;
+    }
     .single-number{
         color:#42A5E9 !important;
         font-size: 32px;

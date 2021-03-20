@@ -3,7 +3,7 @@
         <el-divider content-position="left">基础组件</el-divider>
         <base-button></base-button>
         <base-input></base-input>
-        <base-select :select-list="selectList"></base-select>
+        <base-select :select-list="selectList" ></base-select>
         <base-range></base-range>
         <base-table :list="list">
             <base-column label="名称" prop="name"></base-column>
