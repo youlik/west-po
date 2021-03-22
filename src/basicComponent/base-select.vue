@@ -1,8 +1,8 @@
 <template>
-    <section class="base-select-container" :style="{width:width}">
+    <section class="base-select-container" :style="{width:width}" :class="[{'isFocus':isFocus}]" @focus="showOptios=true">
         <span class="label-container">{{label}}</span>
         <div class="select-container-main">
-            <input v-model="currentValue" class="input">
+            <input v-model="currentValue" class="input" @focus="isFocus = true;showOptions = true" @blur="isFocus = false">
             <div>
                 <ul class="base-select-ul" :class="{showOptions:!showOptions}">
                     <li v-for="item in selectList" class="select-dropdown-item" @click="selectChange(item)"
@@ -12,7 +12,7 @@
             </div>
         </div>
         <i class="el-icon-arrow-right" :class="{arrowDown:showOptions}" style="font-size: 20px;cursor: pointer"
-           @click="showOptions=!showOptions"></i>
+           ></i>
     </section>
 </template>
 
@@ -23,13 +23,14 @@
         data() {
             return {
                 showOptions: false,
-                currentValue: ''
+                currentValue: '',
+                isFocus:false
             }
         },
         methods: {
             selectChange(data) {
                 this.currentValue = data.label
-                this.showOptions = !this.showOptions
+                this.showOptions = false
             }
         },
         props: {
@@ -105,6 +106,9 @@
         transform: rotate(90deg);
     }
 
+    .isFocus{
+        border: 1px solid #00BFFF;
+    }
     .input {
         background: none;
         outline: none;
@@ -112,7 +116,7 @@
         white-space: nowrap;
         box-sizing: border-box;
         line-height: 40px;
-        width: 80%;
+        width: 100%;
         font-size: 16px;
         padding: 0 10px;
         text-align: left;

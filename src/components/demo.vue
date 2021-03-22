@@ -2,7 +2,11 @@
     <div class="demo-container">
         <div class="content-container">
             <el-divider content-position="left">按钮</el-divider>
-            <base-button></base-button>
+            <section class="flex-layout-row">
+                <base-button></base-button>
+                <base-button disabled margin="0 0 0 10px"></base-button>
+            </section>
+
             <el-divider content-position="left">输入框</el-divider>
             <base-input></base-input>
             <el-divider content-position="left">选择</el-divider>
