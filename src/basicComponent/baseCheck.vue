@@ -1,7 +1,7 @@
 <template>
     <div class="base-check-container">
         <div class="title">{{label}}</div>
-        <input type="checkbox"  :checked="currentCheck" @change="changeChecked" class="base-check">
+        <input :type="type"  :checked="currentCheck" @change="changeChecked" class="base-check">
     </div>
 </template>
 
@@ -23,6 +23,12 @@
                 type:String,
                 default:"单选框"
             },
+
+            type:{
+                type:String,
+                default:'checkbox'
+            },
+
             checked:{
                 type:Boolean,
                 default:false

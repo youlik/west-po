@@ -8,5 +8,6 @@ module.exports = {
         data: `@import "@/common/css/baseColor.scss";`
       }
     }
-  }
+  },
+  
 }
