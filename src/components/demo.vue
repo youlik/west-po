@@ -38,7 +38,7 @@
     import BaseColumn from "../basicComponent/base-column";
     import BaseCheck from "../basicComponent/baseCheck";
     import ScrollTable from "../basicComponent/scrollTable";
-
+    import axios from 'axios'
     export default {
         name: "demo",
         data() {
@@ -51,6 +51,18 @@
                 selectList: [{label: '张三', value: '1'}, {label: '李四', value: '2'}]
             }
         },
+        methods:{
+            fetchData(){
+                console.log(this.$axios)
+                this.$axios.get("https://service-bihn1v5s-1258942312.gz.apigw.tencentcs.com/release/user").then(res=>{
+                    console.log("访问成功");
+                })
+            }
+        },
+        created(){
+            this.fetchData()
+        },
+
         components: {
             ScrollTable,
             BaseCheck, BaseColumn, BaseTable, BaseRange, BaseSelect, BaseInput, BaseButton, pathMap}
