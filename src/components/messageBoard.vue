@@ -42,7 +42,7 @@
                     this.$message.warning('请填写完整')
                     return;
                 }
-                this.$axios.post('/users/addMessage', this.message).then(res => {
+                this.$axios.post('/list/addMessage', this.message).then(res => {
                     this.$message.success('留言成功')
                     this.messageContent = ''
                     this.fetchData()

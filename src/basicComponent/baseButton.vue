@@ -24,7 +24,7 @@
         },
         margin:{
             type:String,
-            default:""
+            default:"5px"
         }
     },
     data(){
@@ -62,13 +62,47 @@
     }
 
     .primary{
-        background-color: #007fff;
+        background-color: $blue-1;
         &:hover{
-            background-color: #66b1ff;
-            border-color: #66b1ff;
+            background-color: $blue-1;
+            border-color: $blue-1;
         }
         &:active{
-            background-color: #B2DFEE;
+            background-color: $blue-2;
+        }
+
+        &:disabled{
+            background-color:#DCDCDC;
+            border: 1px solid #ebeef5;
+            cursor: not-allowed;
+        }
+    }
+
+    .danger{
+        background-color: $red-1;
+        &:hover{
+            background-color: $red-1;
+            border-color:$red-1;
+        }
+        &:active{
+            background-color: $red-2;
+        }
+
+        &:disabled{
+            background-color:#DCDCDC;
+            border: 1px solid #ebeef5;
+            cursor: not-allowed;
+        }
+    }
+
+    .success{
+        background-color: $green-1;
+        &:hover{
+            background-color: $green-1;
+            border-color:$green-1;
+        }
+        &:active{
+            background-color: $green-2;
         }
 
         &:disabled{

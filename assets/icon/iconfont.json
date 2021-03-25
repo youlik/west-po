@@ -1,0 +1,44 @@
+{
+  "id": "2445527",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "20559293",
+      "name": "add",
+      "font_class": "005plus03",
+      "unicode": "e79f",
+      "unicode_decimal": 59295
+    },
+    {
+      "icon_id": "20559296",
+      "name": "cancel",
+      "font_class": "029cancel",
+      "unicode": "e7a0",
+      "unicode_decimal": 59296
+    },
+    {
+      "icon_id": "20559297",
+      "name": "add-plus",
+      "font_class": "007plus04",
+      "unicode": "e79e",
+      "unicode_decimal": 59294
+    },
+    {
+      "icon_id": "20559362",
+      "name": "download",
+      "font_class": "078arrowXX03",
+      "unicode": "e7a6",
+      "unicode_decimal": 59302
+    },
+    {
+      "icon_id": "20559370",
+      "name": "update",
+      "font_class": "064upload02",
+      "unicode": "e7a7",
+      "unicode_decimal": 59303
+    }
+  ]
+}
