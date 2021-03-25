@@ -73,7 +73,7 @@
 
         &:disabled{
             background-color:#DCDCDC;
-            border: 1px solid black;
+            border: 1px solid #ebeef5;
             cursor: not-allowed;
         }
     }

@@ -6,7 +6,7 @@
             </span>
             <div>
                 <a href="https://juejin.cn/user/1151943917439230" class="link">掘金</a>
-                <a href="https://juejin.cn/user/1151943917439230" class="link">CSDN</a>
+                <a href="https://blog.csdn.net/yuoliku" class="link">CSDN</a>
             </div>
         </div>
     </div>
